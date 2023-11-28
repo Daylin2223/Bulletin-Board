@@ -1,0 +1,37 @@
+### Get User Posts
+GET http://localhost:3000/api/userposts/all HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyaWQiOiI2NTI2NmU2ZTUzMmEyYTdiNWJhZGNlNmMiLCJpYXQiOjE2OTcwMTg0NDAsImV4cCI6MTY5NzAyMjA0MH0.rD-Tg-0Af0J68FmlNGncxobfGQMYp5-6Vqzwm3mOv-k
+
+### Create user  to Database 
+POST http://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "password"
+}
+
+### Login user  to Database
+POST http://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "password"
+}
+
+### Create post to the Database
+POST http://localhost:3000/api/userposts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyaWQiOiI2NTI2NmU2ZTUzMmEyYTdiNWJhZGNlNmMiLCJpYXQiOjE2OTcwMTg0NDAsImV4cCI6MTY5NzAyMjA0MH0.rD-Tg-0Af0J68FmlNGncxobfGQMYp5-6Vqzwm3mOv-k
+
+{
+    "id": "4",
+    "name": "Gaming"
+}
+
+### Delete post from the Database
+DELETE http://localhost:3000/api/userposts/65267336532a2a7b5badce6f HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJ1c2VyaWQiOiI2NTI2NmU2ZTUzMmEyYTdiNWJhZGNlNmMiLCJpYXQiOjE2OTcwMTg0NDAsImV4cCI6MTY5NzAyMjA0MH0.rD-Tg-0Af0J68FmlNGncxobfGQMYp5-6Vqzwm3mOv-k
